@@ -3,71 +3,97 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Fabrica</title>
-<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
-<link rel="stylesheet" type="text/css" href="stylesheets/flexboxgrid.css">
+<link rel="stylesheet" type="text/css" href="lib/screen.css">
+<link rel="stylesheet" type="text/css" href="lib/flexboxgrid.css">
 <link rel="stylesheet" href="icons/material-icons.css">
-<script language="JavaScript">
-function setVisibility(id, visibility) {
-document.getElementById(id).style.display = visibility;
-}
-</script>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="lib/jsalerts.css">
+<link rel="stylesheet" href="lib/flipin.css">
+<link rel="stylesheet" href="lib/slide.css">
+<link rel="stylesheet" href="lib/styles.css">
+<script src="js/jsalerts.js" type="text/javascript"></script>
+<script src="js/scripts.js" type="text/javascript"></script>
 </head>
 
 <body>
-	
+
 <!--Header-->
     <div class="header">
     <div class="container-fluid">
 
     	<div class="row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <div class="menushow" type=button name=type onclick="setVisibility('menu', 'inline');">
+                <div class="menushow" type=button name=type
+                     onclick="slideIn()">
                 <i class="material-icons">menu</i>
                 </div>
             </div>
-            
+
             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-1">
                 <div class="header-title">Fabrica</div>
+            </div>
+
+            <div id="menuhide" type="button" onclick="slideOut()" style="display:none;position:relative;">
+            	<i class="material-icons">menu</i>
             </div>
         </div>
 	</div>
     </div>
-    
-    <div id="menu" class="menucontent">
+    <div id="menu" class="menucontent col-xs-8 col-sm-6 col-md-4 col-lg-4">
     <div class="container-fluid">
-    
+
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="menuhide" type=button name=type onclick="setVisibility('menu', 'none');">
+                <div class="menuhide" type=button name=type
+                onclick="slideOut();">
                 <i class="material-icons">close</i>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xs-offset-1">
-                <h3><button class="round-button-div small-round-button"><i class="material-icons">home</i></button>Main Title</h3>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-12">
+                <!-- <h4><button class="round-button-div small-round-button"> -->
+                <h4><i class="material-icons">keyboard_arrow_down</i></button>Home Page</h4>
                 <ul style="list-style-type:none">
-                  <li><i class="material-icons">filter_1</i>Option 1</li>
-                  <li><i class="material-icons">filter_2</i>Option 2</li>
-                  <li><i class="material-icons">filter_3</i>Option 3</li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#typography">Typography</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#styled">Styled Types</a></li>
+                </ul>
+                <h4>
+                <i class="material-icons">keyboard_arrow_down</i>Components</h4>
+                <ul style="list-style-type:none">
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Form" style="border: none;">Form Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Card">Card Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Tabs">Tabs Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Lists">List Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Image">Image Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Video">Video Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Table">Table Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Badge">Badge Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Toast">Toast Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#Tooltip">Tooltip Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#CheckBox">CheckBoxes Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#ProgressBar">Progress Bar Component</a></li>
+                  <li><i class="material-icons">keyboard_arrow_right</i><a href="#ColorPalette">Color Palette Component</a></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="image-c large">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <!-- <div class="image-c large">
                     <div class="image-overlay">
                         <span class="image-text">Image.jpg
                         </span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        
-    </div>	
+
+    </div>
 	</div>
-    
+
 <!--Footer-->
-    
+
 	<div class="footer">
     <div class="container-fluid">
 
@@ -77,130 +103,130 @@ document.getElementById(id).style.display = visibility;
                 <p><i class="material-icons">home</i><br>Home</p>
 	            </a>
             </div>
-            
+
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <a href="#">
                 <p><i class="material-icons">events</i><br>Events</p>
             	</a>
             </div>
-            
+
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <a href="#">
                 <p><i class="material-icons">people</i><br>People</p>
             	</a>
             </div>
-            
+
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <a href="#">
                 <p><i class="material-icons">place</i><br>Places</p>
             	</a>
-            </div>    
+            </div>
         </div>
 	</div>
-    </div> 
-    
+    </div>
+
     <br><br><br><br>
-    
+
 
 <div class="container-fluid">
-    
-<!--Fluid Grid System-->    
+
+<!--Fluid Grid System-->
 <div class="grid-system-section">
-    
+
     <div class="row">
         <div class="col-lg-12">
         <h3>Fluid Grid System</h3>
         </div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="box">12</div>
     	</div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
         <div class="box">1</div>
     	</div>
-        
+
 		<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
         <div class="box">11</div>
     	</div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         <div class="box">2</div>
     	</div>
-        
+
 		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div class="box">10</div>
     	</div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <div class="box">3</div>
     	</div>
-        
+
 		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
         <div class="box">9</div>
     	</div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box">4</div>
     	</div>
-        
+
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <div class="box">8</div>
     	</div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
         <div class="box">5</div>
     	</div>
-        
+
 		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
         <div class="box">7</div>
     	</div>
     </div>
-    
+
     <div class="row">
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="box">6</div>
     	</div>
-        
+
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="box">6</div>
     	</div>
     </div>
-    
+
 </div>
 
 
 
-<!-- Grid Sizes -->        
+<!-- Grid Sizes -->
 <div class="grid-size-section">
-    
+
 	<div class="row">
         <div class="col-lg-12">
         <h3>All Possible Grid Sizes</h3>
         </div>
     </div>
-    
+
     <div class="row">
     	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box small">Small 100px</div>
     	</div>
-        
+
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box medium">Medium 200px</div>
     	</div>
-        
+
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box large">large 300px</div>
     	</div>
@@ -210,32 +236,32 @@ document.getElementById(id).style.display = visibility;
 
 
 
-<!--Typography-->        
-<div class="typography-section">   
+<!--Typography-->
+<div class="typography-section">
 
 	<div class="row">
         <div class="col-lg-12">
-        <h3>Typography</h3>
+        <h3 id="typography">Typography</h3>
         </div>
     </div>
-            
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <h1>Standard Headings</h1>
-            <h1>Typography&nbsp;<code>&lt;h1&gt;</code></h1>
-            <h2>Typography&nbsp;<code>&lt;h2&gt;</code></h2>
-            <h3>Typography&nbsp;<code>&lt;h3&gt;</code></h3>
-            <h4>Typography&nbsp;<code>&lt;h4&gt;</code></h4>
-            <h5>Typography&nbsp;<code>&lt;h5&gt;</code></h5>
-            <h6>Typography&nbsp;<code>&lt;h6&gt;</code></h6>
+            <div class="code-div"><xmp><h1></xmp></div><h1>Typography&nbsp;</h1><br>
+            <div class="code-div"><xmp><h2></xmp></div><h2>Typography&nbsp;</h2><br>
+            <div class="code-div"><xmp><h3></xmp></div><h3>Typography&nbsp;</h3><br>
+            <div class="code-div"><xmp><h4></xmp></div><h4>Typography&nbsp;</h4><br>
+            <div class="code-div"><xmp><h5></xmp></div><h5>Typography&nbsp;</h5><br>
+            <div class="code-div"><xmp><h6></xmp></div><h6>Typography&nbsp;</h6>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h1>Styled Types</h1>
-            <p>Basic Type&nbsp;<code>&lt;p&gt;</code></p>
-            <p><strong>Bolded</strong>&nbsp;<code>&lt;strong&gt;</code></p>
-            <p><em>Italicized</em>&nbsp;<code>&lt;em&gt;</code></p>
-            <p><u>Underlined</u>&nbsp;<code>&lt;u&gt;</code></p>
+            <h1 id="styled">Styled Types</h1>
+            <div class="code-div"><xmp><p></xmp></div><p>Basic Type&nbsp;</p><br>
+            <div class="code-div"><xmp><strong></xmp></div><p><strong>Bolded</strong></p><br>
+            <div class="code-div"><xmp><em></xmp></div><p><em>Italicized</em></p><br>
+            <div class="code-div"><xmp><u></xmp></div><p><u>Underlined</u></p>
         </div>
     </div>
 
@@ -243,13 +269,13 @@ document.getElementById(id).style.display = visibility;
 
 <!--Title and Data Component-->
 <div class="text-data-section">
-   
+
     <div class="row">
         <div class="col-lg-12">
-        <h3>Title and Data Component</h3>
+        <h3 id="tableData">Title and Data Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="data">
@@ -260,7 +286,7 @@ document.getElementById(id).style.display = visibility;
             </div>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="data">
             <div class="data-text">
@@ -268,7 +294,7 @@ document.getElementById(id).style.display = visibility;
             </div>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="data">
             <div class="data-indicator"></div>
@@ -279,7 +305,7 @@ document.getElementById(id).style.display = visibility;
             </div>
         </div>
     </div>
-    
+
 </div>
 
 
@@ -288,13 +314,13 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Image Component</h3>
+        <h3 id="Image">Image Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <div class="image-c medium">
+            <div class="image-component medium" style="background: url(images/image_1.png) center/cover;">
                 <div class="image-overlay">
                     <span class="image-text">Image.jpg
                     </span>
@@ -303,7 +329,7 @@ document.getElementById(id).style.display = visibility;
         </div>
 
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <div class="image-c small">
+            <div class="image-component small" style="background: url(images/image_1.png) center/cover;">
                 <div class="image-overlay">
                     <span class="image-text">Image.jpg
                     </span>
@@ -312,7 +338,7 @@ document.getElementById(id).style.display = visibility;
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="image-c large">
+            <div class="image-component large" style="background: url(images/image_1.png) center/cover;">
                 <div class="image-overlay">
                     <span class="image-text">Image.jpg
                     </span>
@@ -324,47 +350,47 @@ document.getElementById(id).style.display = visibility;
 </div>
 
 
-<!--Video Component-->        
+<!--Video Component-->
 <div class="video-section">
-   
+
     <div class="row">
         <div class="col-lg-12">
-        <h3>Video Component</h3>
+        <h3 id="Video">Video Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
     	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <video controls class="video-div">
                 <source src="videos/video_1.mp4" type="video/mp4">
             </video>
-            <div class="video-footer">
+            <div class="video-footer secondary-base">
                     <span class="video-text">Video.mp4
                     </span>
             </div>
          </div>
     </div>
-    
+
 </div>
 
 <!--Form Component-->
 <div class="form-section">
-    
+
     <div class="row">
         <div class="col-lg-12">
-        <h3>Form Components</h3>
+        <h3 id="Form">Form Components</h3>
         </div>
     </div>
-    
-    <!--Button Component--> 
+
+    <!--Button Component-->
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         	<div class="button-div">
-        	<h4>Simple Button</h4>
+        	<h4 id="Button">Simple Button</h4>
             <button class="button-simple-div">Button</button>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         	<div class="button-div">
         	<h4>Coloured Button</h4>
@@ -382,7 +408,7 @@ document.getElementById(id).style.display = visibility;
             <button class="round-button-div"><i class="material-icons">book</i></button>
         	</div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         	<div class="button-div">
             <h4>Round Button Sizes</h4>
@@ -392,14 +418,14 @@ document.getElementById(id).style.display = visibility;
         	</div>
         </div>
 	</div>
-    
-    <!--Checkbox Component--> 
+
+    <!--Checkbox Component-->
     <div class="row">
     	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
             <div class="checkbox-div">
-                <h4>Checked Checkbox</h4>
+                <h4 id="Checkbox">Checked Checkbox</h4>
                 <input type="checkbox" id="cb1" name="checkbox" checked>
-                <label for="cb1">Ckeckbox Checked</label>
+                <label for="cb1">Checkbox Checked</label>
             </div>
         </div>
 
@@ -407,13 +433,13 @@ document.getElementById(id).style.display = visibility;
             <div class="checkbox-div">
                 <h4>Unchecked Checkbox</h4>
                 <input type="checkbox" id="cb2" name="checkbox">
-                <label for="cb2">Ckeckbox Unchecked</label>
+                <label for="cb2">Checkbox Unchecked</label>
             </div>
         </div>
-	<!--Radio Button Component--> 
+	<!--Radio Button Component-->
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
             <div class="radio-div">
-                <h4>Active Radio Button</h4>
+                <h4 id="Radio">Active Radio Button</h4>
                 <input type="radio" id="rd1" name="radio" value="Option 1" checked>
                 <label for="rd1">Radio On</label>
             </div>
@@ -427,16 +453,16 @@ document.getElementById(id).style.display = visibility;
             </div>
         </div>
     </div>
-    
+
     <!--Simple Input Component-->
-    <div class="row"> 
+    <div class="row">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="text-form-div">
-                <h4>First name</h4>
+                <h4 id="Input">First name</h4>
                 <input type="text" name="firstname"  class="text-form-input" placeholder="Shubham">
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="text-form-div">
                 <h4>Last name</h4>
@@ -444,16 +470,16 @@ document.getElementById(id).style.display = visibility;
             </div>
          </div>
      </div>
-    
-    <!--Textarea Component-->     
-    <div class="row">    
+
+    <!--Textarea Component-->
+    <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="textarea-div">
-            <h4>Message</h4>
+            <h4 id="Message">Message</h4>
             <textarea class="textarea-data" cols="" rows="5" placeholder="Hello ..."></textarea>
             </div>
-        </div>    
-    <!--Dropdown Component--> 
+        </div>
+    <!--Dropdown Component-->
     	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="dropdown-div">
                 <h4>Select an option</h4>
@@ -475,7 +501,7 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Table Component</h3>
+        <h3 id="Table">Table Component</h3>
         </div>
     </div>
 
@@ -523,8 +549,8 @@ document.getElementById(id).style.display = visibility;
 	</div>
 
 </div>
-    
-<!--Scrollbar-->        
+
+<!--Scrollbar-->
 <div class="div-section">
 
     <div class="row">
@@ -540,16 +566,17 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Card Component</h3>
+        <h3 id="Card">Card Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <div id= "type1" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <h4>Type 1 Card</h4>
-            <div class="card-type-1">
+            <div  class="card-type-1">
                 <div class="card-header">
                     <span class="card-header-text">Shubham Naik
+                    <i data-id="type1" class="material-icons animate-close">close</i>
                     <i class="material-icons">home</i>
                     <i class="material-icons">link</i>
                     </span>
@@ -568,7 +595,7 @@ document.getElementById(id).style.display = visibility;
                 </div>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <h4>Type 2 Card</h4>
             <div class="card-type-2">
@@ -592,7 +619,7 @@ document.getElementById(id).style.display = visibility;
                 </div>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <h4>Type 3 Card</h4>
             <div class="card-type-3">
@@ -608,7 +635,7 @@ document.getElementById(id).style.display = visibility;
                 </div>
             </div>
         </div>
-        
+
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
             <h4>Type 4 Card</h4>
             <div class="card-type-4">
@@ -625,8 +652,6 @@ document.getElementById(id).style.display = visibility;
             </div>
         </div>
     </div>
-    
-
 </div>
 
 
@@ -635,10 +660,10 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Badge Component</h3>
+        <h3 id="Badge">Badge Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
     	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
             <h4>Text Badge</h4>
@@ -646,7 +671,7 @@ document.getElementById(id).style.display = visibility;
             <p>Inbox <span class="badge-data">13</span></p>
         	</div>
         </div>
-        
+
     	<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
         	<h4>Icon Badge</h4>
             <div class="badge-type-2">
@@ -654,7 +679,7 @@ document.getElementById(id).style.display = visibility;
             </div>
         </div>
     </div>
-    
+
 </div>
 
 <!--Toast Component-->
@@ -662,10 +687,10 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Toast Component</h3>
+        <h3 id="Toast">Toast Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
             <h4>Toast Type 1</h4>
@@ -679,23 +704,6 @@ document.getElementById(id).style.display = visibility;
                 <div id="snackbar-2">Toast Shown</div>
         </div>
     </div>
-
-	<script>
-    function myFunction1() {
-        var x = document.getElementById("snackbar-1")
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
-    </script>
-    
-	<script>
-    function myFunction2() {
-        var x = document.getElementById("snackbar-2")
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
-    </script>
-        
 </div>
 
 <!--Tooltip Component-->
@@ -703,25 +711,25 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Tooltip Component</h3>
+        <h3 id="Tooltip">Tooltip Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">                      
+        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
             <div class="tooltip"><i class="material-icons">home</i>
             <span class="tooltiptext">Home</span>
             </div>
         </div>
-        
-        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">                      
+
+        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
             <div class="tooltip">Message
             <span class="tooltiptext">Hello!</span>
             </div>
         </div>
     </div>
     <br>
-    
+
 </div>
 
 <!--Tabs Component-->
@@ -729,32 +737,32 @@ document.getElementById(id).style.display = visibility;
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Tabs Component</h3>
+        <h3 id="Tabs">Tabs Component</h3>
         </div>
     </div>
-    
+
     <div class="row">
-		
-      
-        <div class="col-xs">            
+
+
+        <div class="col-xs">
         <ul class="tab">
             <li><a href="#one" class="tablinks" onclick="openCity(event, 'London')">London</a></li>
             <li><a href="#two" class="tablinks" onclick="openCity(event, 'Paris')">Paris</a></li>
             <li><a href="#three" class="tablinks" onclick="openCity(event, 'Tokyo')"><i class="material-icons">home</i> Tokyo</a></li>
         </ul>
         </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">            
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div id="London" class="tabcontent">
               <h4>London</h4>
               <p>London is the capital city of England.</p>
             </div>
-            
+
             <div id="Paris" class="tabcontent">
               <h4>Paris</h4>
               <p>Paris is the capital of France.</p>
             </div>
-            
+
             <div id="Tokyo" class="tabcontent">
               <h4>Tokyo</h4>
               <p>Tokyo is the capital of Japan.</p>
@@ -762,41 +770,24 @@ document.getElementById(id).style.display = visibility;
        	</div>
 
     </div>
-
-	<script>
-	function openCity(evt, cityName) {
-		var i, tabcontent, tablinks;
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(cityName).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
-	</script>
-        
 </div>
 
-<!--Tabs Component-->
+<!--Code Component-->
 <div class="code-section">
 
     <div class="row">
         <div class="col-lg-12">
-        <h3>Code Component</h3>
+        <h3 id="Code">Code Component</h3>
         </div>
     </div>
-    
-    <div class="row">    
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">    
+
+    <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
         <div class="code-div">
     <xmp>
     <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">	
-            <div class="image-c medium">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="image-component medium" style="background: url(images/image_1.png) center/cover;">
                 <div class="image-overlay">
                     <span class="image-text">Image.jpg
                     </span>
@@ -811,9 +802,200 @@ document.getElementById(id).style.display = visibility;
 
 </div>
 
+<!--Colour Palett-->
+<div class="color-palette-section">
 
+    <div class="row">
+        <div class="col-lg-12">
+        <h3 id="ColorPalette">Color Palette Component</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="palette">
+            <div class="color-div primary-lightest"></div><h4>primary-lightest</h4>
+            <div class="color-div primary-lighter"></div><h4>primary-lighter</h4>
+            <div class="color-div primary-light"></div><h4>primary-light</h4>
+            <div class="color-div primary-base"></div><h4>primary-base</h4>
+            <div class="color-div primary-dark"></div><h4>primary-dark</h4>
+            <div class="color-div primary-darker"></div><h4>primary-darker</h4>
+            <div class="color-div primary-darkest"></div><h4>primary-darkest</h4>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="palette">
+            <div class="color-div secondary-lightest"></div><h4>secondary-lightest</h4>
+            <div class="color-div secondary-lighter"></div><h4>secondary-lighter</h4>
+            <div class="color-div secondary-light"></div><h4>secondary-light</h4>
+            <div class="color-div secondary-base"></div><h4>secondary-base</h4>
+            <div class="color-div secondary-dark"></div><h4>secondary-dark</h4>
+            <div class="color-div secondary-darker"></div><h4>secondary-darker</h4>
+            <div class="color-div secondary-darkest"></div><h4>secondary-darkest</h4>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="palette">
+            <div class="color-div tertiary-lightest"></div><h4>tertiary-lightest</h4>
+            <div class="color-div tertiary-lighter"></div><h4>tertiary-lighter</h4>
+            <div class="color-div tertiary-light"></div><h4>tertiary-light</h4>
+            <div class="color-div tertiary-base"></div><h4>tertiary-base</h4>
+            <div class="color-div tertiary-dark"></div><h4>tertiary-dark</h4>
+            <div class="color-div tertiary-darker"></div><h4>tertiary-darker</h4>
+            <div class="color-div tertiary-darkest"></div><h4>tertiary-darkest</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Progress Bar-->
+<div class="progress-bar-section">
+
+    <div class="row">
+        <div class="col-lg-12">
+        <h3 id="ProgressBar">Progress Bar Component</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9">
+        <div class="progress-bar-1">
+  			<progress id="pold" value="40" max="100"}>
+            	<div pseudo="-webkit-progress-inner-element">
+                	<div pseudo="-webkit-progress-bar">
+                    	<div pseudo="-webkit-progress-value">
+                    	</div>
+                    </div>
+                </div>
+            </progress>
+        </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <button class="button-color-div" onClick="progress()">Start</button>
+            <button class="button-simple-div" onClick="degress()">Reset</button>
+    	</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <h4>Progress Bar Type 1</h4>
+        <div class="progress-bar-1">
+  			<progress id="pold" value="40" max="100"}>
+            	<div pseudo="-webkit-progress-inner-element">
+                	<div pseudo="-webkit-progress-bar">
+                    	<div pseudo="-webkit-progress-value">
+                    	</div>
+                    </div>
+                </div>
+            </progress>
+        </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <h4>Progress Bar Type 2</h4>
+        <div class="progress-bar-2">
+  			<progress id="pold" value="40" max="100"}>
+            	<div pseudo="-webkit-progress-inner-element">
+                	<div pseudo="-webkit-progress-bar">
+                    	<div pseudo="-webkit-progress-value">
+                    	</div>
+                    </div>
+                </div>
+            </progress>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!--Lists-->
+<div class="lists-section">
+
+    <div class="row">
+        <div class="col-lg-12">
+        <h3 id="Lists">Lists Component</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <h4>Unordered List</h4>
+        <ul>
+        	<li>Coffee</li>
+        	<li>Tea</li>
+        	<li>Milk</li>
+        </ul>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <h4>Ordered List</h4>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <h4>A Description List</h4>
+        <dl>
+            <dt>Coffee</dt>
+	            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+    	        <dd>- white cold drink</dd>
+        </dl>
+		</div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <h4>Nested List</h4>
+        <ol>
+          <li>Coffee</li>
+          <li>Tea
+            <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+            </ul>
+          </li>
+          <li>Milk</li>
+        </ol>
+		</div>
+     </div>
+
+</div>
+    <h3 id="Alert">Alert Component buttons</h3>
+<div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="button-div">
+            <h4>Default</h4>
+            <button onclick="defaultAlert()" class="button-color-div">Button</button>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="button-div">
+            <h4>Info</h4>
+            <button onclick="infoAlert()" class="button-color-div">Button</button>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="button-div">
+            <h4>Warning</h4>
+            <button onclick="warningAlert()" class="button-color-div">Button</button>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="button-div">
+            <h4>Success</h4>
+            <button onclick="successAlert()" class="button-color-div">Button</button>
+            </div>
+        </div>
+</div>
 <br><br><br><br><br><br><br>
-</div>    
+</div>
 </body>
-
 </html>
